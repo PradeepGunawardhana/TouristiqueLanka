@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@import "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* 👇 THIS IS REQUIRED IN TAILWIND v4 */
+@theme {
+  --font-poppins: "Poppins", sans-serif;
+  --font-volkhov: "Volkhov", serif;
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-Playfair: "Playfair Display", serif;
+}
+
+body {
+  @apply font-poppins;
+}
