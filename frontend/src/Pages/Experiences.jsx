@@ -50,9 +50,9 @@ function Experiences() {
 
     return (
         <div className="w-full bg-linear-to-b from-blue-50 to-white">
-            <Hero2 
-                title={'Experiences in Sri Lanka'} 
-                subtext={"Create unforgettable memories with authentic, immersive experiences across the island."} 
+            <Hero2
+                title={'Experiences in Sri Lanka'}
+                subtext={"Create unforgettable memories with authentic, immersive experiences across the island."}
             />
 
             <section className="flex flex-col w-full items-center justify-center bg-white gap-12 py-8 md:py-16 px-4">
@@ -68,15 +68,15 @@ function Experiences() {
                 <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8">
                     {ExperiencesData.map((experience) => {
                         return (
-                            <div 
-                                key={experience.id} 
+                            <div
+                                key={experience.id}
                                 className="flex flex-col border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300"
                             >
                                 {/* Image */}
                                 <div className="relative h-56 overflow-hidden bg-gray-200">
-                                    <img 
-                                        src={experience.img} 
-                                        alt={experience.title} 
+                                    <img
+                                        src={experience.img}
+                                        alt={experience.title}
                                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                                     />
                                     {/* Category Badge */}
@@ -87,7 +87,7 @@ function Experiences() {
 
                                 {/* Content */}
                                 <div className="p-6 flex flex-col gap-4 grow">
-                                    
+
                                     {/* Title & Duration */}
                                     <div>
                                         <h3 className="text-xl font-bold text-blue-900 mb-2">
@@ -125,12 +125,19 @@ function Experiences() {
                                     </div>
 
                                     {/* Button */}
-                                    <Button
-                                        color="blue"
-                                        className="mt-4 w-full h-10 cursor-pointer rounded-lg bg-blue-800/90! px-4 text-sm transition-colors duration-300 outline-none! hover:bg-blue-900! focus:ring-0! focus:outline-none!"
-                                    >
-                                        Book This Experience
-                                    </Button>
+                                    <a href="/contactUs" target='blank'>
+
+
+                                        <Button
+                                            color="blue"
+                                            className="mt-4 w-full h-10 cursor-pointer rounded-lg bg-blue-800/90! px-4 text-sm transition-colors duration-300 outline-none! hover:bg-blue-900! focus:ring-0! focus:outline-none!"
+                                        >
+                                            Book This Experience
+                                        </Button>
+
+                                    </a>
+
+
                                 </div>
                             </div>
                         )

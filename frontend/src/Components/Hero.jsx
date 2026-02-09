@@ -2,6 +2,13 @@ import { Button, Carousel } from "flowbite-react";
 import img1 from "../Assets/img1.jpg";
 import img2 from "../Assets/img2.jpg";
 import img3 from "../Assets/img3.jpg";
+import img4 from "../Assets/img4.jpg";
+import img5 from "../Assets/img5.jpg";
+import img6 from "../Assets/img6.jpg";
+import img7 from "../Assets/img7.jpeg";
+import img8 from "../Assets/img8.jpg";
+import img9 from "../Assets/img9.jpg";
+import img10 from "../Assets/img10.jpg";
 
 export function Hero() {
   return (
@@ -29,6 +36,13 @@ export function Hero() {
         <img src={img1} className="h-full w-full object-cover rounded-none!" alt="slide 1" />
         <img src={img2} className="h-full w-full object-cover rounded-none!" alt="slide 2" />
         <img src={img3} className="h-full w-full object-cover rounded-none!" alt="slide 3" />
+        <img src={img4} className="h-full w-full object-cover rounded-none!" alt="slide 4" />
+        <img src={img5} className="h-full w-full object-cover rounded-none!" alt="slide 5" />
+        <img src={img6} className="h-full w-full object-cover rounded-none!" alt="slide 6" />
+        <img src={img7} className="h-full w-full object-cover rounded-none!" alt="slide 7" />
+        <img src={img8} className="h-full w-full object-cover rounded-none!" alt="slide 8" />
+        <img src={img9} className="h-full w-full object-cover rounded-none!" alt="slide 9" />
+        <img src={img10} className="h-full w-full object-cover rounded-none!" alt="slide 10" />
       </Carousel>
 
       <div className="absolute top-0 left-0  inset-0 px-4 flex flex-col text-center justify-center items-center z-40 gap-5 text-white!">

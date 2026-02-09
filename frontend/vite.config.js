@@ -4,6 +4,6 @@ import { defineConfig } from "vite";
 import flowbiteReact from "flowbite-react/plugin/vite";
 // https://vite.dev/config/
 export default defineConfig({
-    base: '/TouristiqueLanka/',
+    // base: '/TouristiqueLanka/',
     plugins: [react(), tailwindcss(), flowbiteReact()],
 });

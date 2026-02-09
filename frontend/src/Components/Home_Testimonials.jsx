@@ -1,8 +1,36 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react'
 
+const animationStyles = `
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideOutLeft {
+    from {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+  }
+  
+  .testimonial-card {
+    animation: slideInRight 0.8s cubic-bezier(0.4, 0, 0.6, 1) forwards;
+  }
+`;
+
 function Home_Testimonials() {
-    
+
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const testimonials = [
@@ -56,12 +84,21 @@ function Home_Testimonials() {
     setCurrentIndex(index)
   }
 
+  // Auto-rotate carousel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1))
+    }, 5000)
+    return () => clearInterval(interval)
+  }, [])
+
   return (
     <section className="flex h-fit md:h-screen grow w-full items-center justify-center bg-slate-100">
+      <style>{animationStyles}</style>
       <div className=" w-full pt-10 pb-5 px-5 flex flex-col h-full items-center justify-center gap-5 xl:px-0 lg:max-w-7xl ">
-        
+
         {/* Header */}
-        <div className="  flex flex-col  w-full items-start justify-between">
+        <div className="flex flex-col  w-full items-start justify-between">
           <h2 className=" font-volkhov text-2xl lg:text-4xl! font-semibold  text-blue-900 uppercase mb-4">
             Traveler Stories
           </h2>
@@ -77,11 +114,11 @@ function Home_Testimonials() {
         </div>
 
         {/* Testimonial Carousel */}
-        <div className="relative">
-          
+        <div className="relative w-full">
+
           {/* Main Testimonial Card */}
-          <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 md:p-12  min-h-80 flex flex-col justify-between">
-            
+          <div className="testimonial-card bg-white rounded-2xl shadow-lg border border-gray-100 p-8 md:p-12  min-h-80 flex flex-col justify-between">
+
             {/* Content */}
             <div>
               {/* Stars */}
@@ -101,7 +138,7 @@ function Home_Testimonials() {
             <div className="flex items-center gap-4 border-t pt-6">
               <div className="text-4xl md:text-5xl!">{testimonials[currentIndex].image}</div>
               <div className="flex-1">
-                <h3 className= "text-sm md:text-lg font-bold text-blue-900">
+                <h3 className="text-sm md:text-lg font-bold text-blue-900">
                   {testimonials[currentIndex].name}
                 </h3>
                 <p className="text-xs md:text-sm text-gray-600">
@@ -130,11 +167,10 @@ function Home_Testimonials() {
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
-                  className={`h-2 rounded-full transition-all duration-300 ${
-                    index === currentIndex
+                  className={`h-2 rounded-full transition-all duration-300 ${index === currentIndex
                       ? 'bg-blue-600 w-8'
                       : 'bg-gray-300 w-2 hover:bg-gray-400'
-                  }`}
+                    }`}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />
               ))}
