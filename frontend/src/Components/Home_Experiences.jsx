@@ -44,17 +44,19 @@ function Home_Experiences() {
             <div className='flex-1 flex flex-col h-full justify-between items-center p-2 md:p-4'>
 
               <div className=' flex flex-col items-start justify-between h-fit gap-2 text-start lg:py-7'>
-                <h1 className=' text-lg md:text-3xl lg:text-4xl  text-blue-500 uppercase font-montserrat font-semibold'>Knuckles Mountain Range</h1>
-                <h2 className=' text-sm  text-gray-600 font-semibold  md:text-xl lg:text-2xl'>Knuckles</h2>
-                <p className='  text-xs md:text-sm text-gray-600  text-justify'>Discover the breathtaking allure of the Knuckles Mountain Range as it beckons you to its glorious territories through misty veils. A hiker’s paradise that allows one to explore the mountain range and nature. The peaks of the mountain range are quite fascinating to behold even from a distance. A remarkable array of flora and fauna also flourishes here.</p>
+                <h1 className=' text-lg md:text-3xl lg:text-4xl  text-blue-500 uppercase font-montserrat font-semibold'>Discover the Soul of Sri Lanka</h1>
+                <h2 className=' text-sm  text-gray-600 font-semibold  md:text-xl lg:text-2xl'>Discover Sri Lanka</h2>
+                <p className='  text-xs md:text-sm text-gray-600  text-justify'>From ancient rock fortresses and sacred temples to misty tea-covered hills and golden tropical beaches, our carefully curated journeys showcase the very best of Sri Lanka. Whether you seek cultural exploration, wildlife adventure, coastal relaxation, or a romantic honeymoon escape, we create unforgettable travel experiences designed for comfort, authenticity, and lasting memories.</p>
               </div>
 
               <div className=' flex justify-end! w-full'>
-                <Button color="blue" className="h-8 cursor-pointer rounded-2xl px-3 text-xs transition-colors duration-300 outline-none! bg-blue-800/90! hover:bg-blue-900! focus:ring-0! focus:outline-none sm:h-9 sm:px-3 md:h-10 md:px-5 md:text-sm lg:px-5 lg:text-base!">
+                <a href="/experiences">
+                  <Button color="blue" className="h-8 cursor-pointer rounded-2xl px-3 text-xs transition-colors duration-300 outline-none! bg-blue-800/90! hover:bg-blue-900! focus:ring-0! focus:outline-none sm:h-9 sm:px-3 md:h-10! md:px-7! md:text-sm! lg:text-base! uppercase">
 
-                  View More
+                    View More
 
-                </Button>
+                  </Button>
+                </a>
               </div>
 
             </div>

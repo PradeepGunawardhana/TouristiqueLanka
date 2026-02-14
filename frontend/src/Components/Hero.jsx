@@ -52,17 +52,20 @@ export function Hero() {
         <p className=" mb-5 text-xs leading-5! text-white font-medium lg:text-lg! max-w-4xl  md:mb-15! lg:mb-20 lg:leading-8!" >Safe, guided, and memorable trips for every traveler. Explore stunning beaches, ancient temples, lush mountains, and vibrant local culture with our expertly crafted tours.</p>
 
         <div className=" flex justify-center items-center gap-7 ">
+          <a href="/tours">
+            <Button pill color="blue" className="h-8 cursor-pointer border-2  border-transparent! px-3  text-xs transition-colors duration-300 outline-none! bg-blue-800/90! hover:bg-blue-900! focus:ring-0! focus:outline-none sm:h-9 sm:px-3 md:h-12! md:px-5 md:text-sm lg:px-8! lg:py-7! lg:text-base! uppercase">
 
-          <Button pill color="blue" className="h-8 cursor-pointer border-2  border-transparent! px-3  text-xs transition-colors duration-300 outline-none! bg-blue-800/90! hover:bg-blue-900! focus:ring-0! focus:outline-none sm:h-9 sm:px-3 md:h-12! md:px-5 md:text-sm lg:px-8! lg:py-7! lg:text-base! uppercase">
+              Discover More
 
-            Discover More
+            </Button>
+          </a>
+          <a href="/contactUs">
+            <Button pill type="button" color="blue" className=" bg-transparent! border-2  border-white! h-8 cursor-pointer  px-3 text-xs transition-colors duration-300 outline-none!  hover:bg-blue-900! hover:border-transparent! focus:ring-0! focus:outline-none sm:h-9 sm:px-3 md:h-12! md:px-5 md:text-sm lg:px-8! lg:py-7! lg:text-base! uppercase">
 
-          </Button>
-          <Button pill type="button" color="blue" className=" bg-transparent! border-2  border-white! h-8 cursor-pointer  px-3 text-xs transition-colors duration-300 outline-none!  hover:bg-blue-900! hover:border-transparent! focus:ring-0! focus:outline-none sm:h-9 sm:px-3 md:h-12! md:px-5 md:text-sm lg:px-8! lg:py-7! lg:text-base! uppercase">
+              Inquiry Now
 
-            Inquiry Now
-
-          </Button>
+            </Button>
+          </a>
 
         </div>
 

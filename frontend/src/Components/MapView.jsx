@@ -5,6 +5,11 @@ const locations = [
   { name: "Colombo", lat: 6.9271, lng: 79.8612 },
   { name: "Kandy", lat: 7.2906, lng: 80.6337 },
   { name: "Galle", lat: 6.0535, lng: 80.221 },
+  { name: "Negombo", lat: 7.2087, lng: 79.8542 },
+  { name: "Pinnawala", lat: 6.825, lng: 80.125 },
+  { name: "Ella", lat: 6.8847, lng: 81.0552 },
+  { name: "Sigiriya", lat: 7.2333, lng: 80.5833 },
+  { name: "Anuradhapura", lat: 8.3114, lng: 80.4037 },
 ];
 
 export default function MapView() {

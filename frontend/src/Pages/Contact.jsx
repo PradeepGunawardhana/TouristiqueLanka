@@ -18,6 +18,9 @@ function Contact() {
         children: '',
         infants: '',
 
+        // selected predefined tour
+        selectedTour: '',
+
         message: ''
     })
 
@@ -50,7 +53,7 @@ function Contact() {
                                 <h3 className=' text-base text-blue-800 mb-1'>Email</h3>
                                 <div className=' h-[0.5px] bg-blue-800/30' />
                             </div>
-                            <p className='text-sm text-gray-500 lowercase'>info@TOURISTIQUElanka.com</p>
+                            <p className='text-sm text-gray-500 lowercase'>touristiquelanka@gmail.com</p>
                         </div>
                         <div className=''>
                             <div className='mb-4'>
@@ -69,7 +72,7 @@ function Contact() {
                         </div>
 
 
-                {/* Social icons */}
+                        {/* Social icons */}
 
                         <div className=''>
                             <div className='mb-4'>
@@ -79,10 +82,10 @@ function Contact() {
 
 
                             <div className='flex items-center gap-5 text-gray-500 text-3xl transition-colors duration-300'>
-                                <FaFacebookF className='hover:text-blue-600 cursor-pointer transition-colors duration-300'/>
-                                <FaInstagram className='hover:text-blue-600 cursor-pointer transition-colors duration-300'/>
-                                <AiFillTikTok className='hover:text-blue-600 cursor-pointer transition-colors duration-300'/>
-                                <FaWhatsapp className='hover:text-green-400 cursor-pointer transition-colors duration-300'/>
+                                <FaFacebookF className='hover:text-blue-600 cursor-pointer transition-colors duration-300' />
+                                <FaInstagram className='hover:text-blue-600 cursor-pointer transition-colors duration-300' />
+                                <AiFillTikTok className='hover:text-blue-600 cursor-pointer transition-colors duration-300' />
+                                <FaWhatsapp className='hover:text-green-400 cursor-pointer transition-colors duration-300' />
                             </div>
 
 
@@ -168,6 +171,7 @@ function Contact() {
                                     name="adults"
                                     id="adults"
                                     min={0}
+                                    max={100}
                                     value={formData.adults}
                                     onChange={handleChange}
                                     className="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
@@ -182,6 +186,7 @@ function Contact() {
                                     name="infants"
                                     id="infants"
                                     min={0}
+                                    max={100}
                                     value={formData.infants}
                                     onChange={handleChange}
                                     className="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
@@ -196,6 +201,7 @@ function Contact() {
                                     name="children"
                                     id="children"
                                     min={0}
+                                    max={100}
                                     value={formData.children}
                                     onChange={handleChange}
                                     className="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
@@ -242,6 +248,25 @@ function Contact() {
 
 
                         {/* Subject Field */}
+                        {/* Predefined Tours Select */}
+                        <div className="relative z-0 w-full group">
+                            <select
+                                name="selectedTour"
+                                id="selectedTour"
+                                value={formData.selectedTour}
+                                onChange={handleChange}
+                                className="block py-2.5 px-0 w-full text-sm text-heading bg-transparent border-0 border-b-2 border-default-medium appearance-none focus:outline-none focus:ring-0 focus:border-brand peer"
+                            >
+                                <option value="">Select a tour </option>
+                                <option value="Sri Lanka Golden Experience Tour">Sri Lanka Golden Experience Tour</option>
+                                <option value="Mini Tour: Essential Sri Lanka Escape">Mini Tour: Essential Sri Lanka Escape</option>
+                                <option value="Cultural Heritage Tour">Cultural Heritage Tour</option>
+                                <option value="Romantic Honeymoon Tour">Romantic Honeymoon Tour</option>
+                                <option value="Other Custom Tour">Other Custom Tour</option>
+                            </select>
+                            <label htmlFor="selectedTour" className="absolute text-sm text-body duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-left peer-focus:start-0 peer-focus:text-fg-brand peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 text-gray-600  uppercase">Select a Tour <span className="text-red-500">*</span></label>
+                        </div>
+
                         <div className="relative z-0 w-full  group">
                             <input
                                 type="text"

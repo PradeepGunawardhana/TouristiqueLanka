@@ -53,12 +53,15 @@ function Home_About() {
             exotic encounters!
           </p>
 
-          <Button
-            color="blue"
-            className=" uppercase h-8 cursor-pointer rounded-2xl bg-blue-800/90! px-3 text-xs transition-colors duration-300 outline-none! hover:bg-blue-900! focus:ring-0! focus:outline-none sm:h-9 sm:px-3 md:h-10 md:px-5 md:text-sm lg:px-5  lg:text-base!"
-          >
-            Reserve Now
-          </Button>
+          <a href="/contactUs">
+
+            <Button
+              color="blue"
+              className=" uppercase h-8 cursor-pointer rounded-2xl bg-blue-800/90! px-3 text-xs transition-colors duration-300 outline-none! hover:bg-blue-900! focus:ring-0! focus:outline-none sm:h-9 sm:px-3 md:h-10! md:px-7! md:text-sm!   lg:text-base!"
+            >
+              Reserve Now
+            </Button>
+          </a>
         </div>
 
         {/* Why with us Container */}

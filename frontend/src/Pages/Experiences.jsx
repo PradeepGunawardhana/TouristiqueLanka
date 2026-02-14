@@ -1,50 +1,77 @@
 import React from 'react'
 import { Hero2 } from '../Components/Hero2'
 import { Button } from 'flowbite-react'
-import img3 from "../Assets/img3.jpg";
+import img1 from "../Assets/tourimg1.jpg";
+import img2 from "../Assets/exp2.jpg";
+import img3 from "../Assets/exp3.jpg";
+import img4 from "../Assets/exp4.png";
 
 function Experiences() {
 
     const ExperiencesData = [
         {
             id: 1,
-            title: "Tea Plantation Trek",
-            category: "Adventure",
-            duration: "Full Day",
-            description: "Immerse yourself in the lush green tea estates of Nuwara Eliya and learn about Sri Lanka's world-famous tea production.",
-            highlights: "Walk through terraced plantations, visit a working tea factory, enjoy tea tasting with local experts, and meet plantation workers.",
-            includes: ["Guided plantation walk", "Tea factory tour", "Tea tasting session", "Traditional lunch", "Photography stops"],
-            img: img3,
+            title: "Cultural & Heritage Discovery",
+            category: "Culture & History",
+            duration: "2 Days",
+            description: "Step into Sri Lanka’s ancient past and explore sacred temples, royal cities, and UNESCO-listed wonders.",
+            highlights: "Climb the majestic Sigiriya Rock Fortress, witness the evening rituals at Kandy’s Temple of the Tooth, and explore ancient royal heritage sites that showcase Sri Lanka’s rich history.",
+            includes: [
+                "Sigiriya Rock Fortress Visit",
+                "Temple of the Tooth Ceremony",
+                "Professional Local Guide",
+                "Private Transportation",
+                "Entrance Fees to Heritage Sites"
+            ],
+            img: img1
         },
         {
             id: 2,
-            title: "Ancient Temple Spirituality",
-            category: "Cultural",
-            duration: "Half Day",
-            description: "Connect with Sri Lanka's spiritual heritage by visiting sacred temples and learning about Buddhist traditions and rituals.",
-            highlights: "Experience authentic temple ceremonies, meditate with monks, explore ancient architecture, and understand Buddhist philosophy.",
-            includes: ["Temple guidance", "Meditation session", "Ritual participation", "Cultural briefing", "Blessing ceremony"],
-            img: img3,
+            title: "Tea Trails & Hill Country Escape",
+            category: "Nature & Scenic",
+            duration: "2 Days",
+            description: "Breathe in the cool mountain air and explore the rolling tea plantations of Sri Lanka’s hill country.",
+            highlights: "Walk through lush tea estates in Nuwara Eliya, visit a working tea factory, enjoy scenic viewpoints, and experience the famous hill country train journey.",
+            includes: [
+                "Guided Tea Plantation Walk",
+                "Tea Factory Tour & Tasting",
+                "Scenic Train Ride",
+                "Private Transfers",
+                "Photography Stops"
+            ],
+            img: img2
         },
         {
             id: 3,
             title: "Wildlife Safari Adventure",
-            category: "Nature",
-            duration: "Full Day",
-            description: "Discover Sri Lanka's incredible biodiversity through an exciting safari experience in Yala or Udawalawe National Park.",
-            highlights: "Spot leopards, elephants, and exotic birds, enjoy jeep safaris through natural habitats, and learn about conservation efforts.",
-            includes: ["Safari jeep tour", "Expert naturalist", "Binoculars & equipment", "Wildlife photography guide", "Park entrance fees"],
-            img: img3,
+            category: "Wildlife & Nature",
+            duration: "1 Day",
+            description: "Get up close with Sri Lanka’s incredible wildlife in an unforgettable safari experience.",
+            highlights: "Explore Yala National Park in a 4x4 safari jeep, spot elephants, leopards, crocodiles, and exotic bird species in their natural habitat.",
+            includes: [
+                "4x4 Safari Jeep",
+                "Experienced Safari Guide",
+                "National Park Entrance Fees",
+                "Refreshments",
+                "Hotel Pickup & Drop-off"
+            ],
+            img: img3
         },
         {
             id: 4,
-            title: "Coastal Beach Escape",
-            category: "Relaxation",
-            duration: "Half Day",
-            description: "Unwind on pristine sandy beaches, enjoy water sports, and experience the vibrant beach culture of Sri Lanka's southern coast.",
-            highlights: "Surfing lessons, snorkeling, beachside yoga, sunset viewing, and fresh seafood dining.",
-            includes: ["Beach access", "Water sports equipment", "Professional instructor", "Yoga session", "Refreshments"],
-            img: img3,
+            title: "Coastal Bliss & Whale Watching",
+            category: "Beach & Marine",
+            duration: "1 Day",
+            description: "Discover the beauty of Sri Lanka’s southern coastline and witness majestic marine life.",
+            highlights: "Enjoy a whale watching tour in Mirissa, relax on golden beaches, and experience the laid-back coastal lifestyle.",
+            includes: [
+                "Whale Watching Boat Tour",
+                "Safety Equipment",
+                "Professional Marine Guide",
+                "Beach Leisure Time",
+                "Hotel Transfers"
+            ],
+            img: img4
         },
     ]
 
@@ -99,14 +126,14 @@ function Experiences() {
                                     </div>
 
                                     {/* Description */}
-                                    <p className="text-sm text-gray-700 leading-6">
+                                    <p className="text-sm text-gray-700 leading-6 text-justify">
                                         {experience.description}
                                     </p>
 
                                     {/* Highlights */}
                                     <div>
                                         <h4 className="text-sm font-bold text-blue-900 mb-2">What to Expect</h4>
-                                        <p className="text-sm text-gray-600 leading-6">
+                                        <p className="text-sm text-gray-600 leading-6 text-justify">
                                             {experience.highlights}
                                         </p>
                                     </div>

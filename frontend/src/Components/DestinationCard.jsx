@@ -1,16 +1,22 @@
-import { Card } from "flowbite-react";
+import { Button, Card } from "flowbite-react";
 import { LuClock4, LuUsers } from "react-icons/lu";
 import { LiaCarSideSolid } from "react-icons/lia";
+import { IoCalendarOutline } from "react-icons/io5";
+
 import { MdFamilyRestroom } from "react-icons/md";
-export function Destination_Card({ imgPath, title = "No Title" }) {
+export function Destination_Card({ imgPath, title = "No Title", tourType = "Cultural", duration = "1 Day" }) {
   return (
-    <Card className="max-w-sm shadow-xl" imgAlt={title} imgSrc={imgPath}>
+    <Card className="max-w-sm h-fit shadow-xl bg-white! border-0 p-0! *:p-4!">
+
+      <div className="w-full h-48 overflow-hidden rounded-t-lg">
+        <img src={imgPath} alt={title} className="w-full h-full object-cover" />
+      </div>
       <a href="#">
         <div className="text-start">
-          <h5 className="text-xl font-semibold tracking-tight text-gray-900 uppercase dark:text-white">
+          <h5 className="text-xl font-semibold tracking-tight text-blue-900 uppercase ">
             {title}
           </h5>
-          <p className="text-sm font-semibold text-gray-900/50 italic dark:text-gray-100/70">
+          <p className="text-sm font-semibold text-gray-900/50 italic ">
             Cultural Capital of Sri Lanka
           </p>
         </div>
@@ -18,21 +24,21 @@ export function Destination_Card({ imgPath, title = "No Title" }) {
 
       <div className="flex flex-col items-center justify-center gap-1">
         <div className="flex w-full items-center justify-start gap-5">
-          <LuClock4 className="size-4 md:size-6 dark:text-gray-100/70" />
-          <h1 className="text-sm font-medium text-gray-600 md:text-base! dark:text-gray-100/70!">
-            Duration 2 hours
+          <IoCalendarOutline className="size-4 md:size-6 " />
+          <h1 className="text-sm font-medium text-gray-600 md:text-base! ">
+            {duration}
           </h1>
         </div>
         <div className="flex w-full items-center justify-start gap-5">
-          <LiaCarSideSolid className="size-4 md:size-6 dark:text-gray-100/70" />
-          <h1 className="text-sm font-medium text-gray-600 md:text-base! dark:text-gray-100/70!">
+          <LiaCarSideSolid className="size-4 md:size-6 " />
+          <h1 className="text-sm font-medium text-gray-600 md:text-base! ">
             Transport Facility
           </h1>
         </div>
         <div className="flex w-full items-center justify-start gap-5">
-          <LuUsers className="size-4 md:size-6 dark:text-gray-100/70" />
-          <h1 className="text-sm font-medium text-gray-600 md:text-base! dark:text-gray-100/70!">
-            Family Plan
+          <LuUsers className="size-4 md:size-6 " />
+          <h1 className="text-sm font-medium text-gray-600 md:text-base!">
+            {tourType} Tour
           </h1>
         </div>
       </div>
@@ -65,8 +71,17 @@ export function Destination_Card({ imgPath, title = "No Title" }) {
 
         {/*  Price container */}
         <div className="flex flex-col items-end justify-between">
-          <h1 className="font-volkhov text-2xl text-green-500">$35.00</h1>
-          <h5 className="text-xs text-gray-400 md:text-sm">per person</h5>
+
+          <a href="/tours">
+
+            <Button
+              color="blue"
+              className="mt-4 w-full h-10 cursor-pointer rounded-lg bg-blue-800/90! px-4 text-sm transition-colors duration-300 outline-none! hover:bg-blue-900! focus:ring-0! focus:outline-none!"
+            >
+              More Details
+            </Button>
+          </a>
+
         </div>
       </div>
     </Card>

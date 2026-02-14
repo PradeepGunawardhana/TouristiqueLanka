@@ -14,7 +14,7 @@ import logo2 from '../../Assets/logo-2.png'
 export function Nav() {
   const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
-  
+
   useEffect(() => {
     const handleScroll = () => {
       // On home page, scrolled = after hero
@@ -47,7 +47,7 @@ export function Nav() {
       className={`fixed top-0 left-0 z-50 w-full  transition-all duration-300 ${scrolled ? "bg-[#172671]! shadow-sky-500/50  shadow-xl/20!" : "bg-transparent"} sm:px-10 lg:px-16! sm:py-5!`}
       theme={{
         root: {
-          base: ` ${scrolled?'border-0':'  md:border-b  border-gray-300/30!'} bg-transparent dark:bg-transparent`, 
+          base: ` ${scrolled ? 'border-0' : '  md:border-b  border-gray-300/30!'} bg-transparent dark:bg-transparent`,
         },
         link: {
           base: "text-lg font-medium transition-colors duration-300",
@@ -67,20 +67,23 @@ export function Nav() {
       </NavbarBrand>
 
       <div className="pointer-events-auto flex gap-2 md:order-2">
-        <Button
-          color="blue"
-          className="h-8 cursor-pointer rounded-2xl px-3 text-xs transition-colors duration-300 outline-none! bg-blue-800/90! hover:bg-blue-900! focus:ring-0! focus:outline-none sm:h-9 sm:px-3 md:h-10 md:px-5 md:text-sm lg:px-5 lg:text-base!"
-        >
-          Book Now
-        </Button>
-        <NavbarToggle className=" text-white dark:text-gray-300!"/>
+
+        <a href="/contactUs">
+          <Button
+            color="blue"
+            className="h-8 cursor-pointer rounded-2xl px-3 text-xs transition-colors duration-300 outline-none! bg-blue-800/90! hover:bg-blue-900! focus:ring-0! focus:outline-none sm:h-9 sm:px-3 md:h-10 md:px-5 md:text-sm lg:px-5 lg:text-base!"
+          >
+            Book Now
+          </Button>
+        </a>
+        <NavbarToggle className=" text-white dark:text-gray-300!" />
       </div>
 
       <NavbarCollapse className="pointer-events-auto">
         {navItems.map((item) => {
           return (
             <NavbarLink
-            key={item.path}
+              key={item.path}
               href={item.path}
               className={` text-sm lg:text-base! text-white!  hover:text-[#FFC000]!`}
             >

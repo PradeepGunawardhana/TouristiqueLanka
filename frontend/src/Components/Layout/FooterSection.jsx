@@ -6,7 +6,7 @@ function FooterSection() {
         <footer className="bg-[#172671] rounded-base shadow-xs ">
             <div className="w-full mx-auto p-2 md:py-8 sm:px-10  sm:py-5! lg:px-16!">
                 <div className="sm:flex sm:items-center sm:justify-between">
-                    <a href="#" className="flex items-center mb-4 mt-4  sm:mb-0 space-x-3 rtl:space-x-reverse">
+                    <a href="/" className="flex items-center mb-4 mt-4  sm:mb-0 space-x-3 rtl:space-x-reverse">
                         <img src={logo2} className=" h-12 md:h-18 w-auto " alt="Logo" />
                     
                     </a>
@@ -15,10 +15,10 @@ function FooterSection() {
                             <a href="/about" className="hover:underline me-3 md:me-6">About</a>
                         </li>
                         <li>
-                            <a href="#" className="hover:underline me-3 md:me-6">Privacy Policy</a>
+                            <a href="/experiences" className="hover:underline me-3 md:me-6">Experiences</a>
                         </li>
                         <li>
-                            <a href="#" className="hover:underline me-3 md:me-6">Licensing</a>
+                            <a href="/tours" className="hover:underline me-3 md:me-6">Tours</a>
                         </li>
                         <li>
                             <a href="/contactUs" className="hover:underline">Contact</a>
